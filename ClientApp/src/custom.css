@@ -1,0 +1,123 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+#root,html,body {
+  margin: 0;
+  padding: 0;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.image_gallery {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  z-index: 1;
+}
+
+.image_gallery div {
+  transform: translateX(-100vw);
+  position: absolute;
+  opacity: 0;
+  z-index: -100;
+}
+
+.image_gallery div {
+  transform: translateX(-100vw);
+  position: absolute;
+  opacity: 0;
+  z-index: -100;
+}
+
+.image_gallery div.visible {
+  animation: 500ms bounce-in ease-out;
+  transform: translateX(0);
+  display: block;
+  opacity: 100;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.image_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 100px 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0,0,0,0.5);
+  margin: 0;
+}
+
+.card {
+  border-radius: 10px;
+  max-width: 700px;
+  background-color: white;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr;
+  z-index: 1;
+}
+
+
+.image_metadata {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2;
+}
+
+img {
+  display: block;
+  width: auto;
+  aspect-ratio: 10/9;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+* > * {
+  margin-top: 10px;
+}
+
+.comment_section {
+  display: grid;
+  grid-template-areas: "comments comments";
+  grid-template-columns: 3fr 1fr;
+}
+
+.comments {
+  grid-area: comments;
+  max-height: 250px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}

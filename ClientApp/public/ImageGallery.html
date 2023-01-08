@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color"
+          content="#000000">
+    <base href="/">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest"
+          href="/manifest.json">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>ImageApp</title>
+    <link type="text/css" rel="stylesheet" href="defaultstyles.css">
+    <link type="text/css" rel="stylesheet" href="custom.css">
+</head>
+<body>
+<div id="root">
+    <div>
+        <header>
+            <nav class="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3 navbar navbar-light">
+                <div class="container">
+                    <a class="navbar-brand"
+                       href="/">ImageApp</a>
+                    <button aria-label="Toggle navigation"
+                            type="button"
+                            class="mr-2 navbar-toggler">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="d-sm-inline-flex flex-sm-row-reverse collapse navbar-collapse">
+                        <ul class="navbar-nav flex-grow">
+                            <li class="nav-item">
+                                <a class="text-dark nav-link"
+                                   href="/">React
+                                    version</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="text-dark nav-link"
+                                   href="/imagegallery.html">Javascript
+                                    version</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="container">
+            <input type="text" placeholder="Filter" id="search_filter_input" />
+            <div class="image_gallery">
+                
+            </div>
+            <button id="next_page_button">Next page</button>
+        </main>
+    </div>
+    <div class="image_modal" hidden="true">
+        <div class="card">
+            <img class="card_image">
+            <div class="image_metadata">
+                <h3 class="image_title"></h3>
+                <p class="image_description"></p>
+            </div>
+            <div class="comment_section">
+                <div class="comments">
+
+                </div>
+                <textarea class="comment_input" value=""></textarea>
+                <button class="add_comment_button">Add comment</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script src="gallery.js"></script>
